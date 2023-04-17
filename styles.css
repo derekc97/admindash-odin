@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+                "sidebar header"
+                "sidebar main"
+    ;
+}
+
+.sidebar {
+    background-color: #1992d3;
+    grid-area: sidebar;
+    /* border: 5px solid blue; */
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 60px 250px 100px;
+    color: white;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.sidebar > div {
+    /* border: 2px solid red; */
+}
+
+.logo-container {
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.sidebar-one, .sidebar-two {
+    display: grid;
+    align-items: center;
+    font-weight: 500;
+    /* gap: 1rem; */
+}
+
+.sidebar-one > div, .sidebar-two > div {
+    /* border: 2px solid yellow; */
+}
+
+.sidebar-one {
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.sidebar-two {
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 1rem;
+}
+
+.header {
+    grid-area: header;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+                "searchbar account"
+                "welcome-div welcome-div"
+    ;
+}
+
+.header > div {
+    /* border: 1px solid red; */
+}
+
+.searchbar {
+    grid-area: searchbar;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.searchbar input[type=text] {
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 10px;
+    height: 60%;
+    width: 80%;
+    padding-left: 15px;
+}
+
+.account {
+    grid-area: account;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 3fr;
+}
+
+.username {
+    font-weight: 700;
+}
+
+.welcome-div {
+    grid-area: welcome-div;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+
+.welcome-div > div {
+    /* border: 1px solid blue; */
+}
+
+.welcome {
+    display: grid;
+    grid-template-areas: 
+                "welcome-pfp welcometxt1"
+                "welcome-pfp welcometxt2"
+    ;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    /* align-items: center; */
+}
+
+.welcome > div {
+    /* border: 2px solid red; */
+}
+
+.welcome-pfp {
+    grid-area: welcome-pfp;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.welcometxt1 {
+    grid-area: welcometxt1;
+    display: grid;
+    align-items: end;
+}
+
+.welcometxt2 {
+    grid-area: welcometxt2;
+    align-items: center;
+    display: grid;
+    font-weight: 700;
+}
+
+.button-row {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.button-row > div {
+    /* border: 1px solid red; */
+}
+
+.button-row > div > button {
+    border: none;
+    background-color: #1992d3;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    width: auto;
+}
+
+.main {
+    grid-area: main;
+    border: 5px solid green;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+                "your-projects"
+    ;
+}
