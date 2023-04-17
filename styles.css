@@ -21,7 +21,7 @@ body {
     background-color: #1992d3;
     grid-area: sidebar;
     /* border: 5px solid blue; */
-    height: 100vh;
+    height: 200vh;
     display: grid;
     grid-template-rows: 60px 250px 100px;
     color: white;
@@ -174,11 +174,48 @@ body {
 
 .main {
     grid-area: main;
-    border: 5px solid green;
+    /* border: 5px solid green; */
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-                "your-projects"
+                "your-projects announcements"
+                "your-projects trending"
     ;
+}
+
+.your-projects {
+    grid-area: your-projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+            "project-text project-text"
+            "project-grid project-grid"
+            "project grid project-grid"
+    ;
+}
+
+.your-projects > div {
+    border: 2px solid blue;
+}
+
+.project-text {
+    grid-area: project-text;
+    border: 2px solid blue;
+    display: grid;
+}
+
+.project-grid {
+    grid-area: project-grid;
+    border: 2px solid yellow;
+    display: grid;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
