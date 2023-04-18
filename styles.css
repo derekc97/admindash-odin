@@ -21,7 +21,7 @@ body {
     background-color: #43147f;
     grid-area: sidebar;
     /* border: 5px solid blue; */
-    height: 200vh;
+    height: 250vh;
     display: grid;
     grid-template-rows: 60px 250px 100px;
     color: white;
@@ -32,6 +32,17 @@ body {
 .sidebar > div > div > p {
     /* border: 2px solid red; */
     cursor: pointer;
+    position: fixed;
+}
+
+.sb2-child {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    align-items: center;
+}
+
+.icon > img {
+    height: 35px;
 }
 
 .logo-container {
@@ -101,6 +112,15 @@ body {
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr 3fr;
+    gap: 1rem;
+}
+
+.account > div > img {
+    height: 37px;
+    width: 37px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .username {
@@ -141,6 +161,7 @@ body {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .welcometxt1 {
@@ -151,16 +172,17 @@ body {
 
 .welcometxt2 {
     grid-area: welcometxt2;
-    align-items: center;
+    align-items: start;
     display: grid;
     font-weight: 700;
+    font-size: 2.25rem;
 }
 
 .button-row {
     display: grid;
     align-items: center;
-    /* justify-items: center; */
-    justify-content: center;
+    justify-items: center;
+    /* justify-content: end; */
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 0 1rem;
@@ -171,7 +193,7 @@ body {
     background-color: #43147f;
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 15px;
     width: auto;
     cursor: pointer;
 }
@@ -224,7 +246,7 @@ body {
     background-color: white;
     border-radius: 8px;
     display: grid;
-    padding: 1rem;
+    padding: 3rem;
     grid-template-rows: 4fr 1fr;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
@@ -253,6 +275,11 @@ body {
     grid-area: card-buttons;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+}
+
+.card-buttons > div > img {
+    height: 2rem;
+    cursor: pointer;
 }
 
 .announcements {
@@ -329,4 +356,5 @@ body {
     width: 50px;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
